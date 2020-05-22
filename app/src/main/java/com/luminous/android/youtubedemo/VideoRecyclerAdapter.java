@@ -6,8 +6,15 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.List;
+
 public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdapter.ViewHolder> {
 
+    List<YouTubeVideos> youTubeVideosList;
+
+    public VideoRecyclerAdapter(List<YouTubeVideos> youTubeVideosList) {
+        
+    }
 
     @NonNull
     @Override
