@@ -12,5 +12,11 @@ public class YouTubeVideos {
         this.videoUrl = videoUrl;
     }
 
+    public void setVideoUrl(String videoUrl) {
+        this.videoUrl = videoUrl;
+    }
 
+    public String getVideoUrl() {
+        return videoUrl;
+    }
 }
