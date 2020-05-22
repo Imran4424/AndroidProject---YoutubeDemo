@@ -13,7 +13,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     List<YouTubeVideos> youTubeVideosList;
 
     public VideoRecyclerAdapter(List<YouTubeVideos> youTubeVideosList) {
-        
+        this.youTubeVideosList = youTubeVideosList;
     }
 
     @NonNull
