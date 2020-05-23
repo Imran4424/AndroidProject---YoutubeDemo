@@ -1,3 +1,19 @@
 <resources>
     <string name="app_name">YoutubeDemo</string>
+    
+    <string-array name="lip_sync_battle_title">
+        <item>Zendaya Opening</item>
+        <item>Tom Holland Opening</item>
+        <item>Zendaya Final</item>
+        <item>Tom Holland Final</item>
+        <item>Final Result</item>
+    </string-array>
+
+    <string-array name="lip_sync_battle_links">
+        <item><![CDATA[https://www.youtube.com/watch?v=NHKFX0A-HaQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=2&t=0s]]></item>
+        <item><![CDATA[https://www.youtube.com/watch?v=7y4xr-Hq2og&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3&t=0s]]></item>
+        <item><![CDATA[https://www.youtube.com/watch?v=g_K8qUK8pkQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3]]></item>
+        <item>https://www.youtube.com/watch?v=b0nNTklOKRA</item>
+        <item><![CDATA[https://www.youtube.com/watch?v=g_K8qUK8pkQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3]]></item>
+    </string-array>
 </resources>
