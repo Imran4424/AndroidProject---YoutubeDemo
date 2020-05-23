@@ -20,12 +20,12 @@ public class MainActivity extends AppCompatActivity {
         List<String> titleList = Arrays.asList(titles);
 
         String[] links = getResources().getStringArray(R.array.lip_sync_battle_links);
-        List<String> linkList = 
+        List<String> linkList = Arrays.asList(links);
 
         final RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         final LinearLayoutManager listLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(listLayoutManager);
 
-        final VideoRecyclerAdapter videoRecyclerAdapter = new VideoRecyclerAdapter(this, titleList, links);
+        final VideoRecyclerAdapter videoRecyclerAdapter = new VideoRecyclerAdapter(this, titleList, linkList);
     }
 }

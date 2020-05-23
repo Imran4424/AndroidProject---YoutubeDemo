@@ -17,9 +17,9 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     private final List<String> titles;
     private final List<String> links;
 
-    public VideoRecyclerAdapter(Context context, LayoutInflater layoutInflater, List<String> titles, List<String> links) {
+    public VideoRecyclerAdapter(Context context, List<String> titles, List<String> links) {
         this.context = context;
-        this.layoutInflater = layoutInflater;
+        this.layoutInflater =  LayoutInflater.from(context);
         this.titles = titles;
         this.links = links;
     }
