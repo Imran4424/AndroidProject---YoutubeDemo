@@ -27,5 +27,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(listLayoutManager);
 
         final VideoRecyclerAdapter videoRecyclerAdapter = new VideoRecyclerAdapter(this, titleList, linkList);
+        recyclerView.setAdapter(videoRecyclerAdapter);
     }
 }
