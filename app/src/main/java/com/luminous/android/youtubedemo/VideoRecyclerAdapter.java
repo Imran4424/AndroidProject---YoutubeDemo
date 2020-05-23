@@ -14,12 +14,14 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
     private final Context context;
     private final LayoutInflater layoutInflater;
-    List<YouTubeVideos> youTubeVideosList;
+    private final List<String> titles;
+    private final List<String> links;
 
-    public VideoRecyclerAdapter(Context context, LayoutInflater layoutInflater, List<YouTubeVideos> youTubeVideosList) {
+    public VideoRecyclerAdapter(Context context, LayoutInflater layoutInflater, List<String> titles, List<String> links) {
         this.context = context;
         this.layoutInflater = layoutInflater;
-        this.youTubeVideosList = youTubeVideosList;
+        this.titles = titles;
+        this.links = links;
     }
 
     @NonNull
