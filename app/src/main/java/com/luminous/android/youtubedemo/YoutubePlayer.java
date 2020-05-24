@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
@@ -21,6 +22,14 @@ public class YoutubePlayer extends AppCompatActivity {
         setContentView(R.layout.activity_youtube_player);
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
+        PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
+        playerUiController.setCustomAction1(, new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
         getLifecycle().addObserver(youTubePlayerView);
 
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
