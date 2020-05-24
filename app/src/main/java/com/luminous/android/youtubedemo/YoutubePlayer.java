@@ -13,13 +13,14 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.PlayerUiControlle
 
 public class YoutubePlayer extends AppCompatActivity {
     public static String youtubeVideoId;
+    private YouTubePlayerView youTubePlayerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_player);
 
-        YouTubePlayerView youTubePlayerView = findViewById(R.id.youtube_player_view);
+        youTubePlayerView = findViewById(R.id.youtube_player_view);
         getLifecycle().addObserver(youTubePlayerView);
 
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
@@ -29,6 +30,12 @@ public class YoutubePlayer extends AppCompatActivity {
                 youTubePlayer.loadVideo(videoId, 0);
             }
         });
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        youTubePlayerView.release();
     }
 
     @Override
