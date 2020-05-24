@@ -36,6 +36,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(titles.get(position));
+        holder.currentPosition = position;
     }
 
     @Override
@@ -45,6 +46,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView title;
+        public int currentPosition;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
