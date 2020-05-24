@@ -39,7 +39,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
     @Override
     public int getItemCount() {
-        return 0;
+        return titles.size();
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
