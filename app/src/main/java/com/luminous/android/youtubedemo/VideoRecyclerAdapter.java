@@ -48,7 +48,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            title =(TextView) itemView.findViewById(R.id.textView);
+            title = (TextView) itemView.findViewById(R.id.textView);
         }
     }
 }
