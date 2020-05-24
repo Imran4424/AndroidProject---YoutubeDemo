@@ -1,6 +1,7 @@
 package com.luminous.android.youtubedemo;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -51,6 +52,16 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
+
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent youtubePlayerIntent = new Intent(context, YoutubePlayer.class);
+                    YoutubePlayer.youtubeVideoId = links.get(currentPosition);
+
+                    context.startActivity(youtubePlayerIntent);
+                }
+            });
         }
     }
 }
