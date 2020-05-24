@@ -25,37 +25,8 @@ public class YoutubePlayer extends AppCompatActivity {
         ImageView backwardImage = new ImageView(this);
         backwardImage.setImageResource(R.drawable.ic_backward_10_black_24dp);
 
-        Image forwardImage = new Image(R.drawable.ic_forward_10_black_24dp) {
-            @Override
-            public int getFormat() {
-                return 0;
-            }
-
-            @Override
-            public int getWidth() {
-                return 0;
-            }
-
-            @Override
-            public int getHeight() {
-                return 0;
-            }
-
-            @Override
-            public long getTimestamp() {
-                return 0;
-            }
-
-            @Override
-            public Plane[] getPlanes() {
-                return new Plane[0];
-            }
-
-            @Override
-            public void close() {
-
-            }
-        };
+        ImageView forwardImage = new ImageView(this);
+        forwardImage.setImageResource(R.drawable.ic_forward_10_black_24dp);
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
