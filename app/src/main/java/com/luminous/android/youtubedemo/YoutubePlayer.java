@@ -31,6 +31,7 @@ public class YoutubePlayer extends AppCompatActivity {
         youTubePlayerView = findViewById(R.id.youtube_player_view);
 
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
+
         playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
