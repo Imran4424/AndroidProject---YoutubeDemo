@@ -3,6 +3,7 @@ package com.luminous.android.youtubedemo;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.Image;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
@@ -21,16 +22,49 @@ public class YoutubePlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_player);
 
-        ImageView backwardImage
+        ImageView backwardImage = new ImageView(this);
+        backwardImage.setImageResource(R.drawable.ic_backward_10_black_24dp);
+
+        Image forwardImage = new Image(R.drawable.ic_forward_10_black_24dp) {
+            @Override
+            public int getFormat() {
+                return 0;
+            }
+
+            @Override
+            public int getWidth() {
+                return 0;
+            }
+
+            @Override
+            public int getHeight() {
+                return 0;
+            }
+
+            @Override
+            public long getTimestamp() {
+                return 0;
+            }
+
+            @Override
+            public Plane[] getPlanes() {
+                return new Plane[0];
+            }
+
+            @Override
+            public void close() {
+
+            }
+        };
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
-//        playerUiController.setCustomAction1(, new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
+        playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
 
         getLifecycle().addObserver(youTubePlayerView);
 
