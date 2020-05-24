@@ -4,6 +4,7 @@ import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -34,7 +35,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.title.setText(titles.get(position));
     }
 
     @Override
@@ -43,9 +44,11 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
+        public final TextView title;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
+            title =(TextView) itemView.findViewById(R.id.textView);
         }
     }
 }
