@@ -10,10 +10,10 @@
     </string-array>
 
     <string-array name="lip_sync_battle_links">
-        <item><![CDATA[https://www.youtube.com/watch?v=NHKFX0A-HaQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=2&t=0s]]></item>
-        <item><![CDATA[https://www.youtube.com/watch?v=7y4xr-Hq2og&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3&t=0s]]></item>
-        <item><![CDATA[https://www.youtube.com/watch?v=g_K8qUK8pkQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3]]></item>
-        <item>https://www.youtube.com/watch?v=b0nNTklOKRA</item>
-        <item><![CDATA[https://www.youtube.com/watch?v=g_K8qUK8pkQ&list=PLWbt-QOfb7quexdcmQgFU2MmemJcKBqQ_&index=3]]></item>
+        <item>NHKFX0A-HaQ</item>
+        <item>7y4xr-Hq2og</item>
+        <item>g_K8qUK8pkQ</item>
+        <item>jPCJIB1f7jk</item>
+        <item>U2z5OyS6Czo</item>
     </string-array>
 </resources>
