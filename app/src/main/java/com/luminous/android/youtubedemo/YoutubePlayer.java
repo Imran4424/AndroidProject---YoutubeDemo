@@ -46,6 +46,9 @@ public class YoutubePlayer extends AppCompatActivity {
             }
         });
 
+        playerUiController.showCustomAction1(true);
+        playerUiController.showCustomAction2(true);
+
         getLifecycle().addObserver(youTubePlayerView);
 
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
