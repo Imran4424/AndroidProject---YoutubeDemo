@@ -30,6 +30,18 @@ public class YoutubePlayer extends AppCompatActivity {
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
 
+
+
+        getLifecycle().addObserver(youTubePlayerView);
+
+        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                String videoId = youtubeVideoId;
+                youTubePlayer.loadVideo(videoId, 0);
+            }
+        });
+
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
 
         playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
@@ -48,16 +60,6 @@ public class YoutubePlayer extends AppCompatActivity {
 
         playerUiController.showCustomAction1(true);
         playerUiController.showCustomAction2(true);
-
-        getLifecycle().addObserver(youTubePlayerView);
-
-        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
-            @Override
-            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                String videoId = youtubeVideoId;
-                youTubePlayer.loadVideo(videoId, 0);
-            }
-        });
     }
 
     @Override
