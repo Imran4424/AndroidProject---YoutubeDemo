@@ -21,6 +21,8 @@ public class YoutubePlayer extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_youtube_player);
 
+        ImageView backwardImage
+
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
 //        playerUiController.setCustomAction1(, new View.OnClickListener() {
