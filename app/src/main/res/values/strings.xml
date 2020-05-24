@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">YoutubeDemo</string>
-    
+
     <string-array name="lip_sync_battle_title">
         <item>Zendaya Opening</item>
         <item>Tom Holland Opening</item>
