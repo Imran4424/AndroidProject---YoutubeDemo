@@ -29,26 +29,6 @@ public class YoutubePlayer extends AppCompatActivity {
         forwardImage.setImageResource(R.drawable.ic_forward_10_black_24dp);
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
-
-        PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
-
-        playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        playerUiController.setCustomAction2(forwardImage.getDrawable(), new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
-
-        playerUiController.showCustomAction1(true);
-        playerUiController.showCustomAction2(true);
-
         getLifecycle().addObserver(youTubePlayerView);
 
         youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
