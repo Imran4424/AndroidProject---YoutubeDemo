@@ -26,7 +26,7 @@ public class YoutubePlayer extends AppCompatActivity {
         backwardImage.setImageResource(R.drawable.ic_backward_10_white_32dp);
 
         ImageView forwardImage = new ImageView(this);
-        forwardImage.setImageResource(R.drawable.ic_backward_10_black_36dp);
+        forwardImage.setImageResource(R.drawable.ic_forward_10_white_32dp);
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         getLifecycle().addObserver(youTubePlayerView);
