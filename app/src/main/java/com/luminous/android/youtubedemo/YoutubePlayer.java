@@ -12,6 +12,7 @@ import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.PlayerUiController;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.views.YouTubePlayerSeekBar;
 
 public class YoutubePlayer extends AppCompatActivity {
     public static String youtubeVideoId;
@@ -44,7 +45,7 @@ public class YoutubePlayer extends AppCompatActivity {
         playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+
             }
         });
 
@@ -57,6 +58,7 @@ public class YoutubePlayer extends AppCompatActivity {
 
         playerUiController.showCustomAction1(true);
         playerUiController.showCustomAction2(true);
+        playerUiController.showBufferingProgress(true);
     }
 
     @Override
