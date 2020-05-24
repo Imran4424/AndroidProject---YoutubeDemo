@@ -23,12 +23,12 @@ public class YoutubePlayer extends AppCompatActivity {
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
-        playerUiController.setCustomAction1(, new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
-        });
+//        playerUiController.setCustomAction1(, new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//            }
+//        });
 
         getLifecycle().addObserver(youTubePlayerView);
 
