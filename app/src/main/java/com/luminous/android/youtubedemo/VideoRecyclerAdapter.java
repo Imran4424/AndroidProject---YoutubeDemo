@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
+
 import java.util.List;
 
 public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdapter.ViewHolder> {
@@ -47,11 +49,13 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
     public class ViewHolder extends RecyclerView.ViewHolder {
         public final TextView title;
+        public final YouTubePlayerView thumbnail;
         public int currentPosition;
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
+            thumbnail = 
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
