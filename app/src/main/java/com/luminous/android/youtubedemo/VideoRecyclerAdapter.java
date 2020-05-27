@@ -40,6 +40,8 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         holder.title.setText(titles.get(position));
         holder.currentPosition = position;
+
+        
     }
 
     @Override
@@ -55,7 +57,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
-            thumbnail = 
+            thumbnail = (YouTubePlayerView) itemView.findViewById(R.id.youtube_thumbnail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
