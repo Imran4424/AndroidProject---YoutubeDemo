@@ -60,8 +60,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
             title = (TextView) itemView.findViewById(R.id.listTitle);
             thumbnail = (ImageView) itemView.findViewById(R.id.imageThumbnail);
 
-            String imageLink = "https://img.youtube.com/vi/" + links.get(currentPosition) + "/0.jpg";
-            Picasso.get().load(imageLink).into(thumbnail);
+
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
