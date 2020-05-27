@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
+import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
 import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
 
 import java.util.List;
@@ -37,11 +39,16 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.title.setText(titles.get(position));
         holder.currentPosition = position;
-        
-        
+        holder.thumbnail.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
+            @Override
+            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
+                String videoId = links.get(position);
+                youTubePlayer.cueVideo(videoId, 0);
+            }
+        });
     }
 
     @Override
@@ -58,6 +65,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.textView);
             thumbnail = (YouTubePlayerView) itemView.findViewById(R.id.youtube_thumbnail);
+//            getLifecycle().addObserver(thumbnail);
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
