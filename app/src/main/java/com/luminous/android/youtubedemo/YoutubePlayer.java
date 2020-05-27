@@ -57,6 +57,8 @@ public class YoutubePlayer extends AppCompatActivity {
 //        playerUiController.showCustomAction1(true);
 //        playerUiController.showCustomAction2(true);
         playerUiController.showBufferingProgress(true);
+
+        hideSystemUI();
     }
 
     @Override
