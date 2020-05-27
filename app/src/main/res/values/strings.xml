@@ -9,6 +9,10 @@
         <item>Final Result</item>
         <item>Video Ads - Boka Bamun</item>
         <item>Video Ads - Jadu Kola</item>
+        <item>Video Ads - Three</item>
+        <item>Banner ads - Gaming</item>
+        <item>Banner ads - Realme 5i vs Redmi Note 8</item>
+        <item>Banner ads - Redmi note 8 vs Redmi note 8 pro</item>
     </string-array>
 
     <string-array name="lip_sync_battle_links">
@@ -19,5 +23,9 @@
         <item>U2z5OyS6Czo</item>
         <item>OKDAGS4Rvjo</item>
         <item>gXzEq364cHY</item>
+        <item>xz2Zbw2FboU</item>
+        <item>cV5cvBKJ0-w</item>
+        <item>HcKSDg55i70</item>
+        <item>eVqY4ms9eVw</item>
     </string-array>
 </resources>
