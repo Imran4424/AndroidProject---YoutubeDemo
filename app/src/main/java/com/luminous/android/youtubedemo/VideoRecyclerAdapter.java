@@ -41,8 +41,8 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.title.setText(titles.get(position));
         holder.currentPosition = position;
-//        String imageLink = "https://img.youtube.com/vi/" + links.get(position) + "/0.jpg";
-//        Picasso.get().load(imageLink).into(holder.thumbnail);
+        String imageLink = "https://img.youtube.com/vi/" + links.get(position) + "/0.jpg";
+        Picasso.get().load(imageLink).into(holder.thumbnail);
     }
 
     @Override
@@ -59,6 +59,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.listTitle);
             thumbnail = (ImageView) itemView.findViewById(R.id.imageThumbnail);
+
             String imageLink = "https://img.youtube.com/vi/" + links.get(currentPosition) + "/0.jpg";
             Picasso.get().load(imageLink).into(thumbnail);
 
