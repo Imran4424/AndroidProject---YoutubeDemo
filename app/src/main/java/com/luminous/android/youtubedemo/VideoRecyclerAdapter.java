@@ -59,7 +59,7 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
             super(itemView);
             title = (TextView) itemView.findViewById(R.id.listTitle);
             thumbnail = (ImageView) itemView.findViewById(R.id.imageThumbnail);
-            
+            // never 
 
             itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
