@@ -11,6 +11,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.List;
 
 public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdapter.ViewHolder> {
@@ -39,8 +41,8 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
     public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
         holder.title.setText(titles.get(position));
         holder.currentPosition = position;
-
-        String imageLink = 
+//        String imageLink = "https://img.youtube.com/vi/" + links.get(position) + "/0.jpg";
+//        Picasso.get().load(imageLink).into(holder.thumbnail);
     }
 
     @Override
@@ -55,8 +57,10 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
 
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.textView);
+            title = (TextView) itemView.findViewById(R.id.listTitle);
             thumbnail = (ImageView) itemView.findViewById(R.id.imageThumbnail);
+            String imageLink = "https://img.youtube.com/vi/" + links.get(currentPosition) + "/0.jpg";
+            Picasso.get().load(imageLink).into(thumbnail);
 
 
             itemView.setOnClickListener(new View.OnClickListener() {
