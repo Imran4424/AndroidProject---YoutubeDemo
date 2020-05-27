@@ -40,6 +40,8 @@ public class YoutubePlayer extends AppCompatActivity {
 
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
         playerUiController.showBufferingProgress(true);
+
+        hideSystemUI();
     }
 
     @Override
