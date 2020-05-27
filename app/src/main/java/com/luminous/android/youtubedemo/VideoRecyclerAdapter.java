@@ -43,9 +43,6 @@ public class VideoRecyclerAdapter extends RecyclerView.Adapter<VideoRecyclerAdap
         holder.title.setText(titles.get(position));
         holder.currentPosition = position;
 
-
-        
-
         holder.thumbnail.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
             @Override
             public void onReady(@NonNull YouTubePlayer youTubePlayer) {
