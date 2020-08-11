@@ -1,2 +1,3 @@
+include ':YouTubeAndroidPlayerApi'
 rootProject.name='YoutubeDemo'
 include ':app'
