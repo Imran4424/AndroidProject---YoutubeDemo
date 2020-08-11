@@ -39,23 +39,7 @@ public class YoutubePlayer extends AppCompatActivity {
         });
 
         PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
-
-//        playerUiController.setCustomAction1(backwardImage.getDrawable(), new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//
-//        playerUiController.setCustomAction2(forwardImage.getDrawable(), new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//
-//            }
-//        });
-//
-//        playerUiController.showCustomAction1(true);
-//        playerUiController.showCustomAction2(true);
+        
         playerUiController.showBufferingProgress(true);
 
         hideSystemUI();
