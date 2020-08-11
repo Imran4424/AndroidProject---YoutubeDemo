@@ -70,7 +70,12 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
 
     @Override
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
-        
+        youTubePlayer.setFullscreen(true);
+        youTubePlayer.setShowFullscreenButton(false);
+
+        if (!wasRestored) {
+            youTubePlayer.cueVideo(youtubeVideoId);
+        }
     }
 
     @Override

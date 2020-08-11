@@ -14,11 +14,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:showFullScreenButton="false"
-        app:showSeekBar="true"
-        app:showVideoCurrentTime="true"
-        app:showVideoDuration="true"
-        app:showYouTubeButton="false">
+        >
 
     </com.google.android.youtube.player.YouTubePlayerView>
 
