@@ -67,6 +67,7 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
         youTubePlayer.setFullscreen(true);
         youTubePlayer.setShowFullscreenButton(false);
+        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
 
         if (!wasRestored) {
             youTubePlayer.loadVideo(youtubeVideoId);
@@ -84,4 +85,36 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
             Toast.makeText(this, errorMessage, Toast.LENGTH_LONG).show();
         }
     }
+
+    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
+        @Override
+        public void onLoading() {
+
+        }
+
+        @Override
+        public void onLoaded(String s) {
+
+        }
+
+        @Override
+        public void onAdStarted() {
+
+        }
+
+        @Override
+        public void onVideoStarted() {
+
+        }
+
+        @Override
+        public void onVideoEnded() {
+
+        }
+
+        @Override
+        public void onError(YouTubePlayer.ErrorReason errorReason) {
+
+        }
+    };
 }
