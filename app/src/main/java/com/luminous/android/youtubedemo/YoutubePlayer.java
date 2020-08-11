@@ -69,7 +69,7 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
         youTubePlayer.setShowFullscreenButton(false);
 
         if (!wasRestored) {
-            youTubePlayer.cueVideo(youtubeVideoId);
+            youTubePlayer.loadVideo(youtubeVideoId);
         }
     }
 
