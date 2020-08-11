@@ -7,10 +7,8 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.YouTubePlayer;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.listeners.AbstractYouTubePlayerListener;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.player.views.YouTubePlayerView;
-import com.pierfrancescosoffritti.androidyoutubeplayer.core.ui.PlayerUiController;
+import com.google.android.youtube.player.YouTubePlayerView;
+
 
 public class YoutubePlayer extends AppCompatActivity {
     public static String youtubeVideoId;
@@ -23,19 +21,8 @@ public class YoutubePlayer extends AppCompatActivity {
 
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
-        getLifecycle().addObserver(youTubePlayerView);
 
-        youTubePlayerView.addYouTubePlayerListener(new AbstractYouTubePlayerListener() {
-            @Override
-            public void onReady(@NonNull YouTubePlayer youTubePlayer) {
-                String videoId = youtubeVideoId;
-                youTubePlayer.loadVideo(videoId, 0);
-            }
-        });
 
-        PlayerUiController playerUiController = youTubePlayerView.getPlayerUiController();
-
-        playerUiController.showBufferingProgress(true);
 
         hideSystemUI();
     }
@@ -43,7 +30,6 @@ public class YoutubePlayer extends AppCompatActivity {
     @Override
     public void onDestroy() {
         super.onDestroy();
-        youTubePlayerView.release();
     }
 
     @Override
