@@ -7,12 +7,16 @@ import android.widget.ImageView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.google.android.youtube.player.YouTubeBaseActivity;
+import com.google.android.youtube.player.YouTubeInitializationResult;
+import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
 
-public class YoutubePlayer extends AppCompatActivity {
+public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.OnInitializedListener {
     public static String youtubeVideoId;
     private YouTubePlayerView youTubePlayerView;
+    private String YOUTUBE_API_KEY = "AIzaSyDz3OFdXblVTWnoihSnnBagF1WCZAw4Hkg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,5 +67,15 @@ public class YoutubePlayer extends AppCompatActivity {
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_HIDE_NAVIGATION
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN);
+    }
+
+    @Override
+    public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean b) {
+
+    }
+
+    @Override
+    public void onInitializationFailure(YouTubePlayer.Provider provider, YouTubeInitializationResult youTubeInitializationResult) {
+
     }
 }
