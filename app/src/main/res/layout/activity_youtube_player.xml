@@ -13,10 +13,31 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        >
+        app:layout_constraintTop_toTopOf="parent">
 
     </com.google.android.youtube.player.YouTubePlayerView>
+
+    <Button
+        android:id="@+id/backwardButton"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:onClick="backward"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/forwardButton"
+        android:layout_width="150dp"
+        android:layout_height="match_parent"
+        android:alpha="0"
+        android:onClick="forward"
+        android:text="Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

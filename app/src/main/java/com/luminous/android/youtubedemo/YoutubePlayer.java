@@ -1,12 +1,12 @@
 package com.luminous.android.youtubedemo;
 
 import android.os.Bundle;
+import android.os.Debug;
+import android.util.Log;
+import android.view.MotionEvent;
 import android.view.View;
-import android.widget.ImageView;
+import android.widget.Button;
 import android.widget.Toast;
-
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -18,6 +18,9 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
     public static String youtubeVideoId;
     private YouTubePlayerView youTubePlayerView;
     private final String YOUTUBE_API_KEY = "AIzaSyDz3OFdXblVTWnoihSnnBagF1WCZAw4Hkg";
+    private YouTubePlayer globalYouTubePlayer;
+    private Button backwardButton;
+    private Button forwardButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,8 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
 
         youTubePlayerView = findViewById(R.id.youtube_player_view);
         youTubePlayerView.initialize(YOUTUBE_API_KEY, this);
+        youTubePlayerView.setClickable(true);
+
 
         hideSystemUI();
     }
@@ -67,11 +72,36 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
         youTubePlayer.setFullscreen(true);
         youTubePlayer.setShowFullscreenButton(false);
-        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
+        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.CHROMELESS);
+
+
 
         if (!wasRestored) {
             youTubePlayer.loadVideo(youtubeVideoId);
+
+//            youTubePlayerView.requestChildFocus(backwardButton, forwardButton);
+//            backwardButton.bringToFront();
+//            forwardButton.bringToFront();
+//            backwardButton.setVisibility(View.VISIBLE);
+//            forwardButton.setVisibility(View.VISIBLE);
         }
+
+//        youTubePlayerView.addView(backwardButton);
+//        youTubePlayerView.addView(forwardButton);
+    }
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int pointerId = event.getPointerId(0);
+        int pointerIndex = event.findPointerIndex(pointerId);
+
+        float x = event.getX(pointerIndex);
+        float y = event.getY(pointerIndex);
+
+        Log.d("X", Float.toString(x));
+        Log.d("Y", Float.toString(y));
+
+        return super.onTouchEvent(event);
     }
 
     @Override
@@ -86,35 +116,12 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
         }
     }
 
-    private YouTubePlayer.PlayerStateChangeListener playerStateChangeListener = new YouTubePlayer.PlayerStateChangeListener() {
-        @Override
-        public void onLoading() {
+    public void backward(View view) {
+        globalYouTubePlayer.seekRelativeMillis(-10000);
+    }
 
-        }
+    public void forward(View view) {
+        globalYouTubePlayer.seekRelativeMillis(10000);
+    }
 
-        @Override
-        public void onLoaded(String s) {
-
-        }
-
-        @Override
-        public void onAdStarted() {
-
-        }
-
-        @Override
-        public void onVideoStarted() {
-
-        }
-
-        @Override
-        public void onVideoEnded() {
-
-        }
-
-        @Override
-        public void onError(YouTubePlayer.ErrorReason errorReason) {
-
-        }
-    };
 }
