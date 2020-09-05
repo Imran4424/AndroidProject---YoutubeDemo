@@ -67,7 +67,7 @@ public class YoutubePlayer extends YouTubeBaseActivity implements YouTubePlayer.
     public void onInitializationSuccess(YouTubePlayer.Provider provider, YouTubePlayer youTubePlayer, boolean wasRestored) {
         youTubePlayer.setFullscreen(true);
         youTubePlayer.setShowFullscreenButton(false);
-        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.DEFAULT);
+        youTubePlayer.setPlayerStyle(YouTubePlayer.PlayerStyle.MINIMAL);
 
         if (!wasRestored) {
             youTubePlayer.loadVideo(youtubeVideoId);
